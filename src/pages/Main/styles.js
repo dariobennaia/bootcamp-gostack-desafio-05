@@ -90,3 +90,8 @@ export const List = styled.ul`
     }
   }
 `;
+
+export const LiTextCenter = styled.li`
+  text-align: center;
+  list-style: none;
+`;

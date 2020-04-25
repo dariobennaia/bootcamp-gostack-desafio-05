@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
-import { Form, FormValidation, SubmitButton, List } from './styles';
+import {
+  Form,
+  FormValidation,
+  SubmitButton,
+  List,
+  LiTextCenter,
+} from './styles';
 import Container from '../../components/Container';
 
 class Main extends Component {
@@ -103,6 +109,10 @@ class Main extends Component {
             </li>
           ))}
         </List>
+
+        {repositories.length === 0 && (
+          <LiTextCenter>Nenhum repositório cadastado</LiTextCenter>
+        )}
       </Container>
     );
   }
